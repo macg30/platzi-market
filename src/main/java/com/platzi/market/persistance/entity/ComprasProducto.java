@@ -1,6 +1,4 @@
-package com.platzi.market.persistence.entity;
-
-import org.springframework.http.client.support.InterceptingHttpAccessor;
+package com.platzi.market.persistance.entity;
 
 import javax.persistence.*;
 

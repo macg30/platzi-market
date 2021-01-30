@@ -1,9 +1,8 @@
-package com.platzi.market.persistence;
+package com.platzi.market.persistance;
 
-import com.platzi.market.persistence.crud.ProductoCrudRepository;
-import com.platzi.market.persistence.entity.Producto;
+import com.platzi.market.persistance.crud.ProductoCrudRepository;
+import com.platzi.market.persistance.entity.Producto;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
