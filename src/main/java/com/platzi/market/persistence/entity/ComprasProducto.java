@@ -1,11 +1,10 @@
-package com.platzi.market.persistance.entity;
+package com.platzi.market.persistence.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "compras_producto")
+@Table(name = "compras_productos")
 public class ComprasProducto {
-
     @EmbeddedId
     private ComprasProductoPK id;
 
@@ -19,7 +18,7 @@ public class ComprasProducto {
     private Compra compra;
 
     @ManyToOne
-    @JoinColumn(name = "id_producto",insertable = false, updatable = false)
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
     public ComprasProductoPK getId() {

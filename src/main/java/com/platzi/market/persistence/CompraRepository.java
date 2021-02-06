@@ -1,10 +1,10 @@
-package com.platzi.market.persistance;
+package com.platzi.market.persistence;
 
 import com.platzi.market.domain.Purchase;
 import com.platzi.market.domain.repository.PurchaseRepository;
-import com.platzi.market.persistance.crud.CompraCrudRepository;
-import com.platzi.market.persistance.entity.Compra;
-import com.platzi.market.persistance.mapper.PurchaseMapper;
+import com.platzi.market.persistence.crud.CompraCrudRepository;
+import com.platzi.market.persistence.entity.Compra;
+import com.platzi.market.persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +27,7 @@ public class CompraRepository implements PurchaseRepository {
 
     @Override
     public Optional<List<Purchase>> getByClient(String clientId) {
-        return compraCrudRepository.findByCliente(clientId)
+        return compraCrudRepository.findByIdCliente(clientId)
                 .map(compras -> mapper.toPurchases(compras));
     }
 
