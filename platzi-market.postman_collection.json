@@ -185,7 +185,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/platzi-market/api/purchases/client/4546220",
+					"raw": "http://localhost:8090/platzi-market/api/purchases/client/4546221",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -196,7 +196,99 @@
 						"api",
 						"purchases",
 						"client",
-						"4546220"
+						"4546221"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"moises\",\r\n    \"password\": \"platzi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/platzi-market/api/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"platzi-market",
+						"api",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate in Heroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"moises\",\r\n    \"password\": \"platzi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://platzimarketmc.herokuapp.com/platzi-market/api/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"platzimarketmc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"platzi-market",
+						"api",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product All from Heroku",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2lzZXMiLCJpYXQiOjE2MTI2NDMyMDAsImV4cCI6MTYxMjY3OTIwMH0.iBd2uyOH72UKMfj2xgMgeciUAjieRJG5BSxASQp4nbQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://platzimarketmc.herokuapp.com/platzi-market/api/products/all",
+					"protocol": "http",
+					"host": [
+						"platzimarketmc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"platzi-market",
+						"api",
+						"products",
+						"all"
 					]
 				}
 			},
